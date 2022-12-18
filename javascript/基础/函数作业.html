@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数作业</title>
+  <script>
+    // 1. 写一个函数，用户输入任意两个数字，得到加减乘除结果
+    var num1 = parseFloat(prompt('请输入第一个数：'))
+    var num2 = parseFloat(prompt('请输入第二个数：'))
+    function getResult(num1, num2) {
+      return [num1 + num2, num1 - num2, num1 * num2, num1 / num2]
+    }
+    alert('加减乘除的结果为：' + getResult(num1, num2))
+    // 2.写一个函数，用户输入任意两个数，弹出最大值
+    var num3 = parseFloat(prompt('请输入第一个数：'))
+    var num4 = parseFloat(prompt('请输入第二个数：'))
+    function getMax(num3, num4) {
+      return num3 > num4 ? num3 : num4
+    }
+    alert('最大的数是：' + getMax(num3, num4))
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

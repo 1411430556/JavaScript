@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>获得Date总的毫秒数</title>
+  <script>
+    // 获得Date总的毫秒数（时间戳）  不是当前时间的毫秒数，而是从1970年1月1日开始到现在总的毫秒数
+    var date = new Date()
+    // 1. 通过 valueOf() 和  getTime()
+    console.log(date.valueOf())
+    console.log(date.getTime())
+    // 2. 简单的写法，最常用
+    var date1 = +new Date()  // 这个最常用，就不用在之前new了，直接这里new
+    console.log(date1)
+    // 3. H5 新增的 获得总的毫秒数
+    console.log(Date.now())   // 这种方法不需要new就可以用
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>replace替换</title>
+  <style>
+    textarea {
+      width: 300px;
+      height: 100px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <textarea name="" id="message"></textarea>
+  <button>提交</button>
+  <div></div>
+  <script>
+    // 替换 replace
+    // var str = 'andy和red';
+    // // var newStr = str.replace('andy', 'baby');
+    // var newStr = str.replace(/andy/, 'baby');
+    // console.log(newStr);
+    var text = document.querySelector('textarea')
+    var btn = document.querySelector('button')
+    var div = document.querySelector('div')
+    btn.onclick = function () {
+      // g 全局匹配
+      // i 不区分大小写
+      // gi 全局匹配加不区分大小写
+      div.innerHTML = text.value.replace(/激情|gay/g, '**')
+      // 如果使用replaceAll，必须设置全局（“g”）标志， 否则，它将引发 TypeError：“必须使用全局 RegExp 调用 replaceAll”。
+    }
+  </script>
+</body>
+</html>

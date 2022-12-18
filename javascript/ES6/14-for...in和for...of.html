@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for...in和for...of</title>
+</head>
+<body>
+  <script>
+    //声明一个数组
+    const xiyou = ['唐僧', '孙悟空', '猪八戒', '沙僧']
+    
+    // 使用 for...in 遍历对象
+    for (let k in xiyou) {      // for...in里 k 得到的是键名（序号）
+      console.log(k)   // 0 1 2 3
+      console.log(xiyou[k])   // 唐僧 孙悟空 猪八戒 沙僧
+
+    }
+
+    // 使用 for...of 遍历数组
+    for (let k of xiyou) {      // for...of里 k 得到的是键值
+      console.log(k)   // 唐僧 孙悟空 猪八戒 沙僧
+      console.log(xiyou[k])   // undefined
+    }
+
+    /**
+     * for ... in是为遍历对象属性而构建的，不建议与数组一起使用，数组可以用Array.prototype.forEach() 和 for ... of
+     */
+  </script>
+</body>
+</html>

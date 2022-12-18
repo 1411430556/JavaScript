@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>判断文本框是否输入文字</title>
+</head>
+<body>
+<script>
+  <input type="text" name="name" value=""/>
+  <input type="text" name="name" value=""/>
+  <input type="text" name="name" value=""/>
+  /*若干文本框，当光标离开文本框的时候，如果文本框为空，则将文本框的背景颜色设置为红色。
+     * 如果不为空则为白色。提示。焦点进入控件事件是onfocus.焦点离开控件事件是onblur
+     */
+  //1.获取文档中所有文本框
+  window.onload = function () {
+    var allInput = this.document.getElementsByTagName('input')
+
+    for (var i = 0; i < allInput.length; i++) {
+      //2.添加onblur事件
+      allInput[i].onblur = function () {
+        if (this.value.length === 0) {
+          this.style.borderColor = 'red'
+        } else {
+          this.style.borderColor = ''
+        }
+
+      }
+    }
+  }
+</script>
+</body>
+</html>

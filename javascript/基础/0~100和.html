@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0~100和</title>
+    <script>
+        // 1. 0~100的和
+        var num = 0
+        for (var i = 1; i <= 100; i++) {
+            //num = num + i
+            num += i
+        }
+        console.log(num);
+
+        // 2. 0~100的奇数和以及偶数和分别是多少
+        var even = 0
+        var odd = 0
+        for (var i = 1; i <= 100; i++) {
+            i % 2 == 0 ? even = even + i : odd = odd + i   //运用三元表达式快捷判断奇偶
+        }
+        console.log('偶数和是：' + even);
+        console.log('奇数和是：' + odd);
+        
+        // 3. 0~100 偶数和 另一种写法
+        var sum = 0
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                continue
+            }
+            sum += i
+        }
+        console.log(sum);
+
+        // 4. 求0~100累加值，要求跳过个位数为3 得数 (要求用continue)
+        var sum1 = 0
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 == 3) {
+                continue
+            }
+            sum1 += i
+        }
+        console.log(sum1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

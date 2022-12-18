@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div居中</title>
+    <style>
+        .one {
+            background-color: pink;
+            width: 200px;
+            height: 80px;
+            /* 圆角边框 */
+            border-radius: 40px;       /*矩形边框就设置为高度height的一半即可 */
+            
+            /* 外边距可以让盒子水平居中，但是必须满足两个条件
+            1·盒子必须制定了宽度（width）
+            2·盒子左右的外边距都设置为auto */
+            /* margin-left: auto;
+            margin-right: auto; */
+
+            /* 下面两个也可以 */
+            /* margin: auto; */
+            margin: 0 auto;
+        }
+
+        /* .two {
+            这里.two的display和width，height都可以移到上面去，
+            前面变成.one, .two   保留background-color: red; 就行了 
+            display: inline-block;
+            background-color: red;
+            width: 300px;
+            height: 300px;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="one"></div>
+        <!-- <div class="two"></div> -->
+    </div>
+</body>
+
+</html>

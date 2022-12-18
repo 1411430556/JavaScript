@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>let实践案例</title>
+  <style>
+    .item {
+      width: 100px;
+      height: 50px;
+      border: solid 1px rgb(42, 156, 156);
+      float: left;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">点击切换颜色</h2>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <script>
+    //获取div元素对象
+    let items = document.getElementsByClassName('item')
+    // let items = document.querySelectorAll('.item')
+
+    //遍历并绑定事件
+    for (let i = 0; i < items.length; i++) {   // 这里换成let，35行就可以用 items[i]
+      items[i].onclick = function () {
+        //修改当前元素的背景颜色
+        // this.style.background = 'pink'
+        items[i].style.background = 'pink'
+      }
+    }
+
+    //  下面是排他思想
+    // // 获取div元素对象
+    // let items = document.querySelectorAll('.item')
+    // // 遍历并绑定事件
+    // for (let i = 0; i < items.length; i++) {
+    //   items[i].addEventListener('click', function () {
+    //     for (var i = 0; i < items.length; i++) {
+    //       items[i].style.backgroundColor = ''
+    //       this.style.backgroundColor = 'pink'
+    //     }
+    //   })
+    // }
+  </script>
+</body>
+</html>

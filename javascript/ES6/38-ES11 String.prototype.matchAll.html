@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ES11 String.prototype.matchAll</title>
+</head>
+<body>
+  <script>
+    // matchAll() 方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器。
+    let str = `<ul>
+            <li>
+                <a>肖申克的救赎</a>
+                <p>上映日期: 1994-09-10</p>
+            </li>
+            <li>
+                <a>阿甘正传</a>
+                <p>上映日期: 1994-07-06</p>
+            </li>
+        </ul>`
+    // 语法 str.matchAll(regexp)
+    // RegExp必须是设置了全局模式g的形式，否则会抛出异常TypeError。
+    //声明正则
+    const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
+
+    //调用方法
+    const result = str.matchAll(reg)
+
+    // for(let v of result){
+    //     console.log(v);
+    // }
+
+    const arr = [...result]
+
+    console.log(arr)
+
+  </script>
+</body>
+</html>

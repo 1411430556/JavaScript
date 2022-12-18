@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>生成器函数参数</title>
+</head>
+<body>
+  <script>
+    function * gen (arg) {
+      console.log(arg)
+      let one = yield 111
+      console.log(one)
+      let two = yield 222
+      console.log(two)
+      let three = yield 333
+      console.log(three)
+    }
+
+    //执行获取迭代器对象
+    let iterator = gen('AAA')
+
+    // 注意，由于next方法的参数表示上一个yield表达式的返回值，所以在第一次使用next方法时，传递参数是无效的。
+    console.log(iterator.next())
+    // next方法可以传入实参   yield表达式本身没有返回值，或者说总是返回undefined。next方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值。
+    console.log(iterator.next('BBB'))
+    console.log(iterator.next('CCC'))
+    console.log(iterator.next('DDD'))
+
+    // next()是将yield表达式替换成一个值。
+
+    // const g = function * (x, y) {
+    //   let result = yield x + y
+    //   return result
+    // }
+    //
+    // const gen = g(1, 2)
+    // gen.next() // Object {value: 3, done: false}
+    //
+    // gen.next(1) // Object {value: 1, done: true}
+    // 相当于将 let result = yield x + y
+    // 替换成 let result = 1
+
+    // 上面代码中，第二个next(1)方法就相当于将yield表达式替换成一个值1。如果next方法没有参数，就相当于替换成undefined。
+
+    /**
+     * 遇到yield语句，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性的值。
+     * 再次调用next方法时，再继续往下执行，直到遇到下一个yield语句。
+     * */
+  </script>
+</body>
+</html>

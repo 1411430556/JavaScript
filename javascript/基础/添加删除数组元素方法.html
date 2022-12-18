@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>添加删除数组元素方法</title>
+  <script>
+    // 1. push() 是在数组末尾添加一个或多个数组元素  参数直接写数组元素就可以了   push()完毕之后返回的是新数组的长度
+    var arr = [1, 2, 3]
+    arr.push(4, 'pink')    // 向数组末尾添加4和'pink'
+    // console.log(arr.push(4, 'pink'))       这是向数组末尾添加4和'pink'  并返回新的数组长度 5
+    console.log(arr)   // [1, 2, 3, 4, 'pink']
+
+    // 2. unshift() 是在数组开头添加一个或多个数组元素  参数直接写数组元素就可以了  unshift()完毕之后返回的是新数组的长度
+    arr.unshift('red', 'purple')
+    console.log(arr)
+
+    //3. pop() 可以删除数组的最后一个元素，一次只能删除一个。 pop() 完毕后返回删除的那个元素
+    arr.pop()   //括号里不跟参数，直接写
+    // console.log(arr.pop())
+    console.log(arr)
+
+    //4. shift() 删除数组的第一个元素，一次只能删除一个。 shift() 完毕后返回删除的那个元素
+    arr.shift()
+    console.log(arr)
+
+    // 5. splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
+    const months = ['Jan', 'March', 'April', 'June']
+    months.splice(1, 0, 'Feb')
+    // inserts at index 1
+    console.log(months)
+    // expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+    months.splice(4, 1, 'May')
+    // replaces 1 element at index 4
+    console.log(months)
+    // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+    // 语法   array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+    //---参数
+    //start
+    //     指定修改的开始位置（从 0 计数）。如果超出了数组的长度，则从数组末尾开始添加内容；如果是负值，则表示从数组末位开始的第几位（从 -1 计数，这意味着 -n 是倒数第 n 个元素并且等价于 array.length-n）；如果负数的绝对值大于数组的长度，则表示开始位置为第 0 位。
+    //
+    // deleteCount 可选
+    //     整数，表示要移除的数组元素的个数。如果 deleteCount 大于 start 之后的元素的总数，则从 start 后面的元素都将被删除（含第 start 位）。如果 deleteCount 被省略了，或者它的值大于等于array.length - start(也就是说，如果它大于或者等于start之后的所有元素的数量)，那么start之后数组的所有元素都会被删除。如果 deleteCount 是 0 或者负数，则不移除元素。这种情况下，至少应添加一个新元素。
+    //
+    // item1, item2, ... 可选
+    //     要添加进数组的元素，从start 位置开始。如果不指定，则 splice() 将只删除数组元素。
+
+    //---返回值
+    //由被删除的元素组成的一个数组。如果只删除了一个元素，则返回只包含一个元素的数组。如果没有删除元素，则返回空数组。
+
+    //---描述
+    //如果添加进数组的元素个数不等于被删除的元素个数，数组的长度会发生相应的改变。
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求数组最大值</title>
+    <script>
+        var arr = [2, 6, 1, 77, 52, 25, 7]
+        var max = arr[0]
+        for (var i = 1; i < arr.length; i++) {
+            // arr[i] > max ? max = arr[i] : max    第一种三元表达式
+            // max = arr[i] > max ? arr[i] : max    第二种三元表达式
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+        }
+        console.log(max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

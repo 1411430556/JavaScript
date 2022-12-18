@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建对象练习廉颇和后裔</title>
+  <script>
+    // 利用构造函数创造两个英雄对象。函数的公共部分包括：姓名属性(name)，类型属性(type)，血量属性(blood)和攻击方式(attack)。
+    function Hero (name, type, blood) {
+      this.name = name
+      this.type = type
+      this.blood = blood
+      this.attack = function (attack) {
+        console.log(attack)
+      }
+    }
+
+    // 廉颇
+    var lianPo = new Hero('廉颇', '力量型', '500血量')
+    console.log(lianPo.name)
+    console.log(lianPo.type)
+    console.log(lianPo.blood)
+    lianPo.attack('攻击：近战')
+    // 后裔
+    var houyi = new Hero('后裔', '射手型', '100血量')
+    console.log(houyi.name)
+    console.log(houyi.type)
+    console.log(houyi.blood)
+    houyi.attack('攻击：远程')
+  </script>
+</head>
+<body>
+
+</body>
+</html>

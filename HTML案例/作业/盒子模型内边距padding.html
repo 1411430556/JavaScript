@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型内边距padding</title>
+    <style>
+        div {
+            width: 170px;
+            height: 150px;
+            background-color: pink;
+            /* padding会撑大盒子，所以上面设置盒子大小的时候减去了内边距的大小 */
+            padding-left: 30px;
+            padding-top: 50px;
+        }
+
+        p {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>盒子内容盒子内容盒子内容盒子内容</div>
+    <p>对比的盒子</p>
+</body>
+
+</html>

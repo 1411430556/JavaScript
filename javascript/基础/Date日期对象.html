@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date日期对象</title>
+  <script>
+    // 格式化日期，年月日
+    var date = new Date()
+    console.log(date.getFullYear())  // 返回当前日期得 年
+    console.log(date.getMonth() + 1)  //返回得月份小1个月   记得月份要加1
+    console.log(date.getDate())  // 返回今天是几号
+    console.log(date.getDay())  // 返回今天是周几   周一到周六是1~6   周日是0 切记
+
+    // 写一个当前时间得年月日和周几
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var dates = date.getDate()
+    var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+    var day = arr[date.getDay()]
+    console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + day)
+
+    // 返回当前的时间  格式：08:08:08
+    function getTime () {
+      var time = new Date()
+      var h = time.getHours()
+      h = h < 10 ? '0' + h : h
+      var m = time.getMinutes()
+      m = m < 10 ? '0' + m : m
+      var s = time.getSeconds()
+      s = s < 10 ? '0' + s : s
+      return h + ':' + m + ':' + s
+    }
+
+    console.log(getTime())
+  </script>
+</head>
+<body>
+
+</body>
+</html>

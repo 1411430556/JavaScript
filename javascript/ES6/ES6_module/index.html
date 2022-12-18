@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ES6_module</title>
+</head>
+<body>
+  <script type="module">
+    /**
+     // 1.通用的导入方式
+     // 引入 m1.js 模块内容
+     import * as m1 from './src/js/m1.js'
+     // 引入 m2.js 模块内容
+     import * as m2 from './src/js/m2.js'
+     // 引入 m3.js 模块内容
+     import * as m3 from './src/js/m3.js'
+
+     // console.log(m3)
+     // 默认暴露方式下使用里面的属性或方法，后面得跟一个default
+     // m3.default.change()   // 我们可以改变你
+
+     // 2.解构赋值形式导入
+     import {school, teach} from './src/js/m1.js'
+     // 如果有重名，可以使用设置别名
+     import {school as guigu, findJob} from './src/js/m2.js'
+     import {default as m33} from './src/js/m3.js'  //这里的m33就是别名
+     // console.log(school)  // m1的
+     // console.log(teach)   // m1的
+     // console.log(guigu,findJob)   // m2的
+     // console.log(m33)
+
+     // 3.简便形式，只能用于默认暴露
+     import m333 from './src/js/m3.js'
+
+     console.log(m333)
+     **/
+  </script>
+<!--  第二种导入方式-->
+  <script src="./src/js/app.js" type="module"></script>
+</body>
+</html>

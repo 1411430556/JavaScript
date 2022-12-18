@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object.keys遍历对象属性</title>
+</head>
+<body>
+  <script>
+    // 用于获取对象自身所有的属性    返回一个由属性名组成的数组   同理 Object.values 可以得到属性的值
+    var obj = {
+      id: 1,
+      pname: '小米',
+      price: 1999,
+      num: 2000,
+    }
+    var arr = Object.keys(obj)
+    console.log(arr)
+    arr.forEach(function (value) {
+      console.log(value)
+    })
+  </script>
+</body>
+</html>

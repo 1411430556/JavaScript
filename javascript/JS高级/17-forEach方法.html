@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>forEach方法</title>
+</head>
+<body>
+  <script>
+    // forEach 迭代(遍历) 数组      forEach() 方法对数组的每个元素执行一次给定的函数。
+    var arr = [1, 2, 3]
+    var sum = 0
+    // value 数组当前项的值（单个）
+    // index 数组当前项的索引
+    // array 数组对象本身（全部）
+    arr.forEach(function (value, index, array) {
+      console.log('每个数组元素' + value)
+      console.log('每个数组元素的索引号' + index)
+      console.log('数组本身' + array)
+      sum += value
+    })
+    console.log(sum)
+  </script>
+</body>
+</html>

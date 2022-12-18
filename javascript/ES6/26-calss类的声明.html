@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>calss类的声明</title>
+</head>
+<body>
+  <script>
+    // ES5的方法
+    //手机
+    function Phone (brand, price) {
+      this.brand = brand
+      this.price = price
+    }
+
+    //添加方法
+    Phone.prototype.call = function () {
+      console.log('我可以打电话!!')
+    }
+
+    //实例化对象
+    let Huawei = new Phone('华为', 5999)
+    Huawei.call()
+    console.log(Huawei)
+
+    //ES6的方法
+    // 通过calss
+    class shouji {
+      constructor (brand, price) {
+        this.brand = brand
+        this.price = price
+      }
+
+      // 方法必须使用该语法，不能使用ES5的对象完整形式
+      // call: function () {}  这种不行
+      call () {
+        console.log('我可以打电话！！')
+      }
+    }
+
+    let onePlus = new shouji('一加', 1999)
+    console.log(onePlus)
+  </script>
+</body>
+</html>

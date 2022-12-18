@@ -1,0 +1,15 @@
+// less命名不能以数字开头，不能有特殊符号
+// 区分大小写
+// 以 @ 开头 定义变量，并且使用时 直接 键入 @名称。
+@color: pink;
+@Color: rgb(75, 164, 109);
+@font14: 14px;
+
+body {
+    background-color: @color;
+}
+
+div {
+    background-color: @Color;
+    font-size: @font14;
+}

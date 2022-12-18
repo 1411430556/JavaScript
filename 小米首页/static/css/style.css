@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.sep {
+    color: #424242;
+    margin: 0 0.3em;
+}
+
+.header {
+    background-color: #333;
+    height: 40px;
+    font-size: 12px;
+}
+
+.fl ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.tt {
+    float: right;
+    margin-right: 402px;
+    height: 40px;
+}
+
+.fl {
+    float: left;
+    margin-left: 402px;
+    line-height: 40px;
+}
+
+.fr {
+    display: inline;
+    /* float: right; */
+    /* margin-right: 402px; */
+    line-height: 40px;
+}
+
+.shoppingcart {
+    position: relative;
+    top: -12px;
+    background-color: #424242;
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+.shoppingcart img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.shoppingcart a {
+    position: relative;
+    top: 25%;
+    width: 100%;
+}
+
+.shoppingcart a:hover {
+    color: #f96c16;
+}

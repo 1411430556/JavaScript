@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两面翻转盒子</title>
+    <style>
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transition: all .6s;
+            transform-style: preserve-3d;
+            /* perspective: 400px; */
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 300px;
+            /* backface-visibility 属性定义当元素背面向屏幕时是否可见。
+                如果在旋转元素不希望看到其背面时，该属性很有用。 */
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background-color: purple;
+            /* 不用上面的backface-visibility: hidden;用下面这个也可以，但是上面的更好 */
+            /* transform: translateZ(1px); */
+        }
+
+        .back {
+            background-color: pink;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">黑马程序员</div>
+        <div class="back">pink老师这里等你</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //解法一:
+        // var saveMoneySum = 0;//最开始总存钱的金额为0
+        // var drawMoneySum = 0;//最开始总取钱的金额为0
+        // var yourMoney = 100;//最开始卡里就有100块钱
+        // do {
+        //     var num = prompt('输入您要的操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+        //     // 存钱
+        //     if (num == 1) {
+        //         var saveMoney = prompt('请输入要存储的金额(元):');
+        //         saveMoneySum = saveMoneySum + saveMoney;
+        //         alert('您的余额为:' + (saveMoneySum - drawMoneySum + 100) + '元');
+        //     }
+        //     // 取钱
+        //     else if (num == 2) {
+        //         var drawMoney = prompt('请输入要取出的金额(元):');
+        //         if (drawMoney <= saveMoneySum + drawMoneySum) {
+        //             drawMoneySum = drawMoneySum + drawMoney;
+        //             alert('您的余额为:' + (saveMoneySum - drawMoneySum + 100) + '元');
+        //         } else {
+        //             alert('账户余额不足!');
+        //         }
+        //     }
+        //     // 显示余额
+        //     else if (num == 3) {
+        //         alert('您的余额为:' + (saveMoneySum - drawMoneySum + 100) + '元');
+        //     }
+        //     // 退出
+        //     else if (num == 4) {
+        //         continue;
+        //     }
+        //     else {
+        //         alert('系统未识别操作!请重新输入!');
+        //     }
+        // } while (num != 4);
+        
+
+
+        //解法二:
+        var saveMoneySum = 0;
+        var drawMoneySum = 0;
+        var yourMoney = 100;
+        //通过for和计数器为2达到循环效果
+        for (var i = 0; i < 2; i++) {
+            var num = +prompt('输入您要的操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            if (num != 4) {
+                //i--会使代码得到循环
+                i--;
+                if (num == 1 || num == 2) {
+                    //存钱(当输入1时)
+                    if (num == 1) {
+                        var saveMoney = +prompt('请输入存钱金额:');
+                        saveMoneySum += saveMoney;
+                    }
+                    //取钱(当输入2时)
+                    else {
+                        var drawMoney = +prompt('请输入取钱金额:');
+                        if (drawMoney <= yourMoney) {
+                            drawMoneySum += drawMoney;
+                        } else {
+                            alert('金额不足');
+                        }
+                    }
+                    var yourMoney = saveMoneySum - drawMoneySum + 100;
+                    var hint = alert('当前金额:' + yourMoney);
+                }
+                //显示金额(当输入3时)
+                if (num == 3) {
+                    alert('当前金额为:' + yourMoney + '元');
+                }
+                //输入其它会报错
+                if (num != 1 && num != 2 && num != 3) {
+                    alert('输入错误!请输入正确数字!');
+                }
+            }
+            // i++会打断代码的循环(当输入4时)
+            else {
+                i++;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>通过类名获取元素注意事项</title>
+</head>
+<body>
+<div>123</div>
+<script>
+  var pp = document.querySelector('div')
+  pp.onclick = function () {
+    console.log('我被选中了')
+  }
+// <div class="pp">123</div>
+// var pp = document.getElementsByClassName('pp')
+// pp[0].onclick = function () {     // 通过getElementsByClassName()获取到的元素是一个元素的集合，通过getElementById()获取到的元素就是一个元素
+//   console.log('我被选中了')        // http://t.csdn.cn/igH5q  这里可以看看
+// }
+
+      //  !!!  getElementsByClassName() 获取的是类数组，是一个集合，得写明选第几个[]
+      //    除了getElementById，其他的如getElementsByClassName、getElementsByTagName()等返回的结果都是一个类似数组（伪数组）的列表，哪怕你的页面中只有一个符合要求的元素。所以在使用这些方法的时候需要通过下标访问元素   let elem = document.getElementsByClassName("animate")[0];
+
+  // 下面这个看看
+  // <button type="button" className="btn" id="btn-commit">提交</button>
+  // document.getElementsByClassName('btn')[0].onclick = function () {
+  //   console.log(333)
+  // }
+  // document.getElementById('btn-commit').onclick = function () {    这个等同上面的
+  //   console.log(333)
+  // }
+</script>
+</body>
+</html>

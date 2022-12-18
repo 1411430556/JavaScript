@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ES11 可选链操作符</title>
+</head>
+<body>
+  <script>
+    // ?.
+    function main (config) {
+      // const dbHost = config && config.db && config.db.host;
+      const dbHost = config?.db?.host  // 这里，如果下面的main()里没有传入参数，会显示undefined，而不是像上面会报错
+
+      console.log(dbHost)
+    }
+
+    main({
+      db: {
+        host: '192.168.1.100',
+        username: 'root',
+      },
+      cache: {
+        host: '192.168.1.200',
+        username: 'admin',
+      },
+    })
+  </script>
+</body>
+</html>

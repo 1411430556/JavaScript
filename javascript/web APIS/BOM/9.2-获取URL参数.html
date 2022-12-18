@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>获取URL参数</title>
+</head>
+<body>
+  <div></div>
+  <script>
+    console.log(location.search) // ?uname=andy
+    var div = document.querySelector('div')
+    // 1.先去掉 问号？  substring('起始的位置'，截取几个字符);
+    var params = location.search.substring(1)  // 没写截取几个字符就代表后面的全部都截取
+    // 2. 利用=把字符串分割为数组 split('=')
+    var arr = params.split('=')
+    // 3.把数据写入div中
+    div.innerHTML = arr[1] + '，欢迎您'
+    div.style.backgroundColor = 'pink'
+    // div.innerHTML = location.search.substring(1).split('=')[1] + '，欢迎您'
+  </script>
+</body>
+</html>

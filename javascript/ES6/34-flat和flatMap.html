@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flat和flatMap</title>
+</head>
+<body>
+  <script>
+    // flat 平的
+    // 将多维数组转换为低维数组
+    const arr = [1, 2, 3, 4, [5, 6]]
+    console.log(arr.flat())   // [1, 2, 3, 4, 5, 6]
+
+    const arr1 = [1, 2, 3, 4, [5, 6, [7, 8, 9]]]
+    // 参数为深度，数字。  这里放Infinity也行
+    console.log(arr1.flat(2))   // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    //flatMap  下面不用flatMap的话结果就是[[10] [20] [30] [40]]
+    const arr2 = [1, 2, 3, 4]
+    const result = arr2.flatMap(item => [item * 10])
+    console.log(result)   // [10, 20, 30, 40]
+  </script>
+</body>
+</html>

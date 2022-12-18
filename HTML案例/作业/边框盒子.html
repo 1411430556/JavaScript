@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框盒子</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /* 边框为实线 */
+            /* border: 50px solid pink; */
+
+            /* 边框为虚线 */
+            /* border: 50px dashed pink; */
+
+            /* 边框为圆点（点线边框） */
+            /* border: 50px dotted pink; */
+
+            /* 给一个200*200的盒子，上边框为红色，
+            其余边框为蓝色（提示：一定注意边框的层叠性） */
+            /* border-top:3px solid red;
+            border-left: 3px solid blue;
+            border-right: 3px solid blue;
+            border-bottom: 3px solid blue; */
+
+            /* 层叠性的运用,注意有顺序，下面的red层叠了blue */
+            border: 3px solid blue;
+            border-top: 3px solid red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

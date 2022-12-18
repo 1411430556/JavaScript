@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>本地存储之localStorage</title>
+</head>
+<body>
+  <input type="text">
+  <button class="set">存储数据</button>
+  <button class="get">获取数据</button>
+  <button class="remove">删除数据</button>
+  <button class="del">清空所有数据</button>
+  <div></div>
+  <script>
+    // 1. 生命周期永久有效，除非手动删除，否则关闭页面也会存在
+    // 2. 可以多窗口（页面）共享，（同一浏览器可以共享）
+    // 3. 以键值对的形式存储使用
+    var ipt = document.querySelector('input')
+    var set = document.querySelector('.set')
+    var get = document.querySelector('.get')
+    var remove = document.querySelector('.remove')
+    var del = document.querySelector('.del')
+    var div = document.querySelector('div')
+    set.addEventListener('click', function () {
+      // 当我们点击了之后，就可以把表单里面的值存储起来
+      var val = ipt.value
+      localStorage.setItem('uname', val)
+    })
+    get.addEventListener('click', function () {
+      // 当我们点击了之后，就可以把表单里面的值获取过来
+      console.log(localStorage.getItem('uname'))
+      div.innerHTML = localStorage.getItem('uname')
+    })
+    remove.addEventListener('click', function () {
+      // 当我们点击了之后，就可以把表单里面的数据删除
+      localStorage.removeItem('uname')
+    })
+    del.addEventListener('click', function () {
+      // 当我们点击了之后，清除所有的
+      localStorage.clear()
+    })
+  </script>
+</body>
+</html>

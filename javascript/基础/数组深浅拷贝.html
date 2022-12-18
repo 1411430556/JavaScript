@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组拷贝</title>
+  <script>
+    // 浅拷贝
+    // var arr = ['小明', '小王']
+    // var arr2 = arr
+    // arr[0] = '小红'
+    // console.log(arr2)
+    // 结果： ['小红', '小王']
+
+
+    // 需求：把数组拷贝一份，和原数组脱离关系
+
+    // 改成深拷贝
+    // var arr = ['小明', '小王']
+    // var arr2 = Object.assign({}, arr)
+    // arr[0] = '小红'
+    // console.log(arr2)
+    // 结果： {0: '小明', 1: '小王'}
+
+
+    // Object.assign 本身是浅拷贝方法注意
+    let obj = {
+      name: '小李',
+      age: 18
+    }
+    let obj2 = Object.assign({}, obj)   // 括号里的{}，把obj的值给了新的对象，看见数组或者对象，就是在堆里新申请一个地址（空间），所以obj2和obj就互不影响了，如果没有{}，那浅拷贝，就会互相影响。  这个方法有个缺点：只能深拷贝一级属性，二级以上属性（引用类型）就是浅拷贝 （https://www.bilibili.com/video/BV1b5411D78g/?spm_id_from=333.788.recommend_more_video.2&vd_source=5350ccacb8e246bab5d5b7ead7c40260&t=443.1）
+    obj.name = '小刘'
+    console.log(obj.name)   // 小刘
+    console.log(obj2.name)  // 小李
+  </script>
+</head>
+<body>
+
+</body>
+</html>

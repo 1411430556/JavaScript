@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>location常见的方法</title>
+</head>
+<body>
+  <button>点击</button>
+  <script>
+    var btn = document.querySelector('button')
+    btn.addEventListener('click', function () {
+      // 记录浏览历史，所以可以实现后退功能
+      // location.assign('http://www.itcast.cn')
+      // 不记录浏览历史，所以不可以实现后退功能
+      // location.replace('http://www.itcast.cn')
+      // 重新加载页面，相当于刷新按钮或者F5，如果参数为true，则相当于强制刷新 ctrl + F5
+      location.reload(true)
+    })
+  </script>
+</body>
+</html>

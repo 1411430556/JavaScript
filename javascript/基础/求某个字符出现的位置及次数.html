@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // var arr = ['red', 'blue', 'red', 'green', 'pink', 'red']
+    // var index = arr.indexOf('red')
+    // var num = 0
+    // while (index !== -1) {
+    //   console.log(index)
+    //   num++
+    //   index = arr.indexOf('red', index + 1)
+    // }
+    // console.log('red出现的次数是：' + num)
+
+    var arr = ['red', 'blue', 'red', 'green', 'pink', 'red']
+    var index = arr.indexOf('red')
+    var strindex = '' //用来存位置
+    var num = 0 //用来存次数
+    while (index !== -1) {
+      strindex = strindex + index + ''
+      num++
+      index = arr.indexOf('red', index + 1)
+    }
+    console.log('red出现的位置有:' + strindex)
+    console.log('red出现的次数为:' + num)
+
+    // var str = 'asdoosdpedncxsdopdaqdg'
+    // var json = {}
+    // for (var i = 0; i < str.length; i++) {
+    //   var key = str.charAt(i)
+    //   if (json[key] === undefined) {
+    //     json[key] = 1
+    //   } else {
+    //     json[key]++
+    //   }
+    // }
+    // console.log(json)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

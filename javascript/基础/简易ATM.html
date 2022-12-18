@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易ATM</title>
+    <script>
+        var saveMoneySum = 0 //最开始总存钱的金额为0
+        var drawMoneySum = 0 //最开始总取钱的金额为0
+        var yourMoney = 100 //最开始卡里就有100块钱
+        do {
+            var num = prompt('请输入您要的操作:' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出')
+            // 1.存钱
+            if (num == 1) {
+                var saveMoney = parseFloat(prompt('请输入存钱金额:'))
+                saveMoneySum += saveMoney
+                alert('当前余额为:' + (saveMoneySum - drawMoneySum + yourMoney) + '元')   
+                // 取钱
+            } else if (num == 2) {
+                var drawMoney = parseFloat(prompt('请输入要取出的金额:'))
+                if (drawMoney <= saveMoneySum + yourMoney) {
+                    drawMoneySum += drawMoney
+                    alert('当前余额为:' + (saveMoneySum - drawMoneySum + yourMoney) + '元')
+                } else {
+                    alert('余额不足！')
+                }
+                // 显示余额
+            }else if (num == 3) {
+                alert('当前余额为:' + (saveMoneySum - drawMoneySum + yourMoney) + '元')
+            } else if (num ==4) {
+                continue
+                // break
+            } else {
+                alert('系统未识别此输入！请重新输入！')
+            }
+        } while (num != 4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

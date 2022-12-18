@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>原型</title>
+</head>
+<body>
+  <script>
+    // 1. 构造函数的问题.
+    function Star (uname, age) {
+      this.uname = uname
+      this.age = age
+      // this.sing = function() {
+      //     console.log('我会唱歌')
+
+      // }
+    }
+
+    Star.prototype.sing = function () {
+      console.log('我会唱歌')
+    }
+    var ldh = new Star('刘德华', 18)
+    var zxy = new Star('张学友', 19)
+    console.log(ldh.sing === zxy.sing)
+    // console.dir(Star)
+    ldh.sing()
+    zxy.sing()
+
+    // hasOwnProperty() 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。
+    console.log(ldh.hasOwnProperty('uname'))  // true
+    console.log(ldh.hasOwnProperty('sing'))  // false  这个也相当于在原型里
+    console.log(ldh.hasOwnProperty('hasOwnProperty'))  // false   在原型里
+    console.log(ldh.__proto__.__proto__.hasOwnProperty('hasOwnProperty'))  // true  在原型的原型中去找
+    // 2. 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>预解析案例</title>
+    <script>
+      // 预解析就是将 函数function 和 所有的 var 提升到  当前  作用域的最前面
+      f1()
+      console.log(c)
+      console.log(b)
+      console.log(a)
+
+      function f1 () {
+        var a = b = c = 9
+        console.log(a)
+        console.log(b)
+        console.log(c)
+      }
+
+      // 结果为
+
+      // 9
+      // 9
+      // 9
+      // 9
+      // 9
+      // Uncaught ReferenceError: a is not defined  (未捕获的ReferenceError: a没有定义)
+
+      // 相当于以下代码
+      // function f1 () {
+      //   var a
+      //   a = b = c = 9
+      // 相当于 var a = 9; b = 9; c = 9;   b和c直接赋值，没有var声明，当全局变量看
+      // 集体声明是这样的  var a = 9, b = 9, c = 9;  (var a = 9, var b = 9, var c = 9;)
+      //   console.log(a)
+      //   console.log(b)
+      //   console.log(c)
+      // }
+
+      // f1()
+      // console.log(c)
+      // console.log(b)
+      // console.log(a)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

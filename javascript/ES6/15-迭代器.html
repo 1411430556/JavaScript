@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>迭代器</title>
+</head>
+<body>
+  <script>
+    //声明一个数组
+    const xiyou = ['唐僧', '孙悟空', '猪八戒', '沙僧']
+
+    //使用 for...of 遍历数组
+    // for(let v of xiyou){
+    //     console.log(v)
+    // }
+
+    let iterator = xiyou[Symbol.iterator]()
+
+    //调用对象的next方法
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+  </script>
+</body>
+</html>

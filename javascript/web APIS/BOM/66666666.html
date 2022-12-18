@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <script>
+    function reverseArr (arr) { // 创建翻转任意数组函数
+      var newArr = [] // 创建存放翻转后元素的新数组
+      for (var i = arr.length - 1; i >= 0; i--) {
+        // newArr[newArr.length] = arr[i] // newArr.length会随元素增加而增加
+        newArr.push(arr[i])
+      }
+      return newArr
+    }
+
+    var arr = [1, 1, 2, 2, 3, 4, 5, 6, 7, 8]
+    console.log(reverseArr(arr)) // [8, 7, 6, 5, 4, 3, 2, 2, 1, 1]
+  </script>
+</body>
+</html>

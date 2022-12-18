@@ -1,0 +1,23 @@
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+
+    // 1.less嵌套，子元素的样式直接写在父元素里就好了
+    a {
+        color: red;
+
+        // 2.如果有伪类 伪元素 交集选择器（交集选择器是既又原则），前面加 & 符号，解析为父元素自身或父元素的伪类，伪元素
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.nav {
+    .logo {
+        &::before {
+            content: "";
+        }
+    }
+}

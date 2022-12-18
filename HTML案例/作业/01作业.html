@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单</title>
+  <style>
+    h1 {
+      color: lightsalmon;
+      font-size: 66px;
+    }
+
+    .red {
+      color: red;
+      /* 背景颜色 background-color */
+      background-color: aqua;
+    }
+
+    /* body {
+        text-align: center;
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>青春不常在，抓紧谈恋爱</h1>
+  <h3 class="red">青春不常在，抓紧谈恋爱</h3>
+  <form action="xxx" method="post" name="表单">
+    性别：<input type="radio" name="sex" value="男" id="nan">
+    <!-- label这个  for 和 id都要有， 一 一对应 -->
+    <label for="nan">男</label>
+    <input type="radio" name="sex" value="女" id="nv">
+    <label for="nv">女</label>
+
+    <br><br>
+
+    生日：<select>
+    <option>请选择年</option>
+  </select>
+    <select>
+      <option>请选择月</option>
+    </select>
+    <select>
+      <option>请选择日</option>
+    </select>
+
+    <input type="date">
+
+    <br><br>
+
+    所在地区：<input type="text">
+
+    <br><br>
+
+    婚姻状况：
+    <!-- 单选这种，必须定义个相同的name，才会是单选 -->
+    <label>
+      <input type="radio" name="marry">未婚
+    </label>
+    <label>
+      <input type="radio" name="marry">离婚
+    </label>
+    <label>
+      <input type="radio" name="marry">丧偶
+    </label>
+
+    <br><br>
+
+    学历：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+    <br><br>
+    月薪：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+    <br><br>
+    手机号：&nbsp;&nbsp;&nbsp;<input type="text">
+    <br><br>
+    昵称：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+    <br><br>
+    喜欢的类型：<input type="checkbox" name="leixing">妩媚
+    <input type="checkbox" name="leixing">柔美
+    <input type="checkbox" name="leixing">可爱
+    <input type="checkbox" name="leixing">小鲜肉
+    <input type="checkbox" name="leixing">型男
+    <input type="checkbox" name="leixing">气质
+
+    <br><br>
+
+    自我介绍：<textarea rows="10" cols="30"></textarea>
+
+    <br><br>
+
+    <input type="button" value="免费注册">
+
+    <br><br>
+
+    <!-- checked="checked"， 表示预先选定了 -->
+    <input type="radio" checked="checked">我同意注册条款和会员加入标准
+
+    <br><br>
+
+    <a href="#">我是会员，立即登录</a>
+
+  </form>
+
+</body>
+
+</html>

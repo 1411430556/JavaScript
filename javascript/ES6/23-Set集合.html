@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Set集合</title>
+</head>
+<body>
+  <script>
+    // 声明一个Set
+    let s = new Set(['大事儿', '小事儿', '好事儿', '坏事儿', '小事儿'])
+
+    console.log(s)  // 会自动去除重复的元素
+    // 检查元素个数
+    // console.log(s.size)   // 4
+
+    // 添加新的元素
+    // s.add('喜事儿')
+
+    // 删除元素
+    // s.delete('坏事儿')
+
+    // 检测是否含有某个元素，返回一个布尔值
+    // console.log(s.has('糟心事'))   // false
+
+    // 清空
+    // s.clear()
+
+    // 可以用for...of进行遍历
+    for (let v of s) {
+      console.log(v)
+    }
+  </script>
+</body>
+</html>

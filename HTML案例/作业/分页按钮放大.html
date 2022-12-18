@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页按钮放大</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        ul li {
+            float: left;
+            list-style: none;
+            text-decoration: none;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid pink;
+            border-radius: 50%;
+            margin: 30px;
+            /* background-color: aquamarine; */
+            transition: all 0.3s;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(226, 88, 19);
+        }
+
+        ul li:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+    </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>filter筛选数组</title>
+</head>
+<body>
+  <script>
+    // filter 筛选数组   返回的是一个新的数组
+
+    // 元素的值
+    // 元素的索引
+    // 被遍历的数组本身
+    var arr = [12, 66, 4, 88, 3, 7]
+    var newArr = arr.filter(function (value, index) {
+      // return value >= 20
+      return value % 2 === 0
+    })
+    console.log(newArr)
+  </script>
+</body>
+</html>

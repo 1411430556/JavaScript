@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑中断练习</title>
+    <script>
+        var num = 0
+        console.log(123 || num++);  // 是逻辑或 123为真 则返回123，后面的num++不再执行         123
+        console.log(num);// 所以这里的num为0                                                 0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

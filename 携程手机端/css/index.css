@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 540px;
+    min-width: 320px;
+    /* height: 3000px; */
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+.search-index {
+    padding: 12px 12px 6px;
+    background-color: #fff;
+}
+
+/* .search-index input::before {
+    content: "111111";
+    background: url(../images/Check.png) no-repeat;
+} */
+.search {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 32px;
+    border: 1.8px solid #3883f4;
+    border-radius: 16px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.search img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    font-size: 15px;
+}
+
+.nav {
+    overflow: hidden;
+    margin: 12px 0 2px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.local-nav {
+    display: flex;
+    height: 58px;
+}
+
+.local-nav span {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.local-nav span img {
+    width: 32px;
+    height: 32px;
+}
+
+.local-nav span:nth-child(n+2) {
+    border-left: 1px solid #fff;
+}
+.nav div:nth-child(n+2) {
+    color: black;
+}

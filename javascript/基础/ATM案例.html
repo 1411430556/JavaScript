@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 接收用户输入的用户名和密码，若用户名为 “admin” ,密码为 “123456” ,则提示用户登录成功!  否则，让用户一直输入。
+        // var login = prompt('请输入您的用户名');
+        // while (login !== 'admin') {
+        //     var login = prompt('用户名不存在，请再次输入');
+        // }
+        // var password = prompt('admin用户,请输入您的密码');
+        // while (password !== '123456') {
+        //     password = prompt('密码错误，请重新输入');
+        // }
+        // alert('登录成功！');
+
+        // var balance = 100;// 余额为100
+        // do {
+        //     var action = parseInt(prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出'))  
+        //     // action = parseInt(action);//将字符串转换成数字型
+        //     switch (action) {
+        //         case 1:
+        //             var moneyNum = prompt('请您输入存的钱数:');
+        //             balance = balance + parseInt(moneyNum);
+        //             alert('您现在的余额为：' + balance);
+        //             break;
+        //         case 2:
+        //             var withdraw = prompt('请输入取的钱数：');
+        //             balance = balance - parseInt(withdraw);
+        //             alert('您现在的余额为：' + balance);
+        //             break;
+        //         case 3:
+        //             alert('您现在的余额为:' + balance);
+        //             break;
+        //         case 4:
+        //             alert('您正在退出！');
+        //             break;
+        //         default:
+        //             alert('请您重新输入');
+        //     }
+        // } while (action !== 4)
+
+        var money1 = 100;
+
+        while (true) {
+            var num = prompt('请输入您要的操作:' + '\n' + + +1 + '.存钱' + '\n' + 2 + ':取钱' + '\n' + 3 + '.显示余额' + '\n' + 4 + ':退出')
+            if (num == 1) {
+                var money2 = prompt('请输入存钱的金额')
+                money1 += parseInt(money2);
+                alert(money1)
+            } else if (num == 2) {
+                var money3 = prompt('请输入取款金额');
+                money1 -= parseInt(money3);
+                alert(money1);
+            }
+            else if (num == 3) {
+                alert(money1);
+            }
+            else {
+                alert('退出程序')
+                break
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>遍历对象</title>
+  <script>
+    var obj = {
+      uname: '张三',
+      age: 18,
+      sex: '男',
+    }
+    for (var k in obj) {
+      console.log(k)   // k是变量  输出得到的是属性名
+      console.log(obj[k])  // obj[k]  得到的是属性值     注意这里[]里面不加''
+    }
+    // for in里面的变量我们通常喜欢写 k 或者 key
+    // for ... in是为遍历对象属性而构建的，不建议与数组一起使用，数组可以用Array.prototype.forEach()和for ... of
+  </script>
+</head>
+<body>
+
+</body>
+</html>

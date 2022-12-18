@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>权重比较</title>
+  <style>
+    /* 拥有更高权重等级的 css 权重更高。
+    也就说对于不同等级的选择器，即使低等级的选择器再多，
+    其权重仍小于只有一个高等级选择器的 css。
+    例如 11 个 class 和一个 id，
+    利用前述的计算方法 11 个 class 的权重为 110，id 权重为 100，class 权重值更大，但是这并不成立，
+    这种情况下之前的计算方法不再适用。 */
+    .root1 .root2 .root3 .root4 .root5 .root6 .root7 .root8 .root9 .root10 .root11 {
+      background: blue;
+    }
+
+    #root {
+      background: red;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="root" class="root1" class="root2" class="root3" class="root4" class="root5" class="root6" class="root7"
+    class="root8" class="root9" class="root10" class="root11">
+  </div>
+
+</body>
+
+</html>

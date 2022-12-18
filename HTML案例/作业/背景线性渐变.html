@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景线性渐变</title>
+    <style>
+        div {
+            width: 500px;
+            height: 100px;
+            /* 背景线性渐变必须添加浏览器私有前缀 */
+            background: -webkit-linear-gradient(left, red, rgba(11, 222, 191, 0.879), pink, skyblue);
+            /* 上面的可以用下面这种方法，方向前加 to ，就不用加浏览器私有前缀了 */
+            /* background: linear-gradient(to left, red, rgba(11, 222, 191, 0.879), pink, skyblue); */
+
+
+            /* 左上角开始 */
+            /* background: -webkit-linear-gradient(top left,red,rgba(11, 222, 191, 0.879),pink,skyblue); */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

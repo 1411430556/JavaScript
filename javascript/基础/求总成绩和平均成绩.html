@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求总成绩和平均成绩</title>
+    <script>
+        var num = prompt('请输入班级的总人数：')
+        var sum = 0              //总成绩
+        var average = 0         //平均成绩
+        for (var i = 1; i <= num; i++) {
+            var score = parseFloat(prompt('请输入第' + i + '个学生的成绩'))     //注意这里用户输入的是字符串类型，得转换类型
+            sum = sum + score
+        }
+        average = sum / num
+        alert('总成绩是' + sum + '分')
+        alert('平均成绩是' + average + '分')
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

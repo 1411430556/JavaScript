@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>浅拷贝</title>
+</head>
+<body>
+  <script>
+    // 浅拷贝只是拷贝一层, 更深层次对象级别的只拷贝引用.  其实是下面这句话
+    // 基本数据类型：变量名和值都存在栈内存中，是一对一的关系
+    // 引用数据类型：变量名和一个指向值的地址存储在栈地址中，而值存储在堆内存中，是一对多的关系
+
+    // 深拷贝拷贝多层, 每一级别的数据都会拷贝.
+
+    // Object.assign() 当对象中只有一级属性，没有二级属性的时候，此方法为深拷贝，但是对象中有对象的时候，此方法，在二级属性以后就是浅拷贝。
+    // 如果目标对象与源对象具有相同的 key，则目标对象中的属性将被源对象中的属性覆盖，后面的源对象的属性将类似地覆盖前面的源对象的属性。
+    var obj = {
+      id: 1,
+      name: 'andy',
+      msg: {
+        age: 18,
+      },
+    }
+    var o = {}
+    // for (var k in obj) {
+    //     // k 是属性名   obj[k] 属性值
+    //     o[k] = obj[k]
+    // }
+    // // console.log(o)
+    // o.msg.age = 20
+    // o.id = 2
+    // console.log(obj)
+
+    console.log('--------------')
+    Object.assign(o, obj)  // 这里浅拷贝
+    // console.log(o)
+    o.msg.age = 20
+    o.id = 2
+    console.log(obj)  // {id: 1, name: 'andy', msg: {age: 20}}
+    console.log(o)    // {id: 2, name: 'andy', msg: {age: 20}}
+  </script>
+</body>
+</html>

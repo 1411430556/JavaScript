@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代（子）选择器</title>
+    <style>
+        ol li a {
+            color: rgb(236, 14, 170);
+            text-decoration: none;
+        }
+
+        /* 选择ol里面所有最近一级li标签，div里面那个li属于div的 */
+        ol>li {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <div>
+            <li>我是ol的儿子</li>
+        </div>
+        <li>我是ol的儿子</li>
+        <li>我是ol的儿子</li>
+        <li><a href="#">我是孙子 </a></li>
+
+    </ol>
+</body>
+
+</html>

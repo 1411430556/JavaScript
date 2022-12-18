@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>记住用户名</title>
+</head>
+<body>
+  <input type="text" id="username" oninput="change()">
+  <input type="checkbox" name="" id="remember"> 记住用户名
+  <script>
+    var username = document.querySelector('#username')
+    var remember = document.querySelector('#remember')
+    if (localStorage.getItem('username')) {
+      username.value = localStorage.getItem('username')
+      remember.checked = true
+    }
+    remember.addEventListener('change', function () {
+      if (this.checked) {
+        localStorage.setItem('username', username.value)
+      } else {
+        localStorage.removeItem('username')
+      }
+    })
+    function change () {
+      remember.checked = false
+    }
+    // 文本框输入变化时取消勾选：给文本框添加属性oninput = "change()"，编写函数function change() { remember.checked = false; }
+    // oninput 事件在用户输入时触发。该事件在 <input> 或 <textarea> 元素的值发生改变时触发。提示： 该事件类似于 onchange 事件。不同之处在于 oninput 事件在元素值发生变化是立即触发， onchange 在元素失去焦点时触发。另外一点不同是 onchange 事件也可以作用于 <keygen> 和 <select> 元素。
+  </script>
+</body>
+</html>

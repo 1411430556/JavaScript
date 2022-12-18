@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin塌陷</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 为父元素定义上边框 */
+            border-top: 1px solid transparent;
+            
+            /* 加下面这一句也可以 */
+            /* overflow: hidden; */
+        }
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

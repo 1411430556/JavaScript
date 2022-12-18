@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>offsetX和offsetY</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    var box = document.querySelector('.box')
+    box.addEventListener('mousemove', function (e) {
+      // console.log(e.offsetX)
+      // console.log(e.offsetY)
+      this.innerHTML = 'x坐标是：' + e.offsetX + '-----' + 'y坐标是：' + e.offsetY
+    })
+  </script>
+</body>
+
+</html>

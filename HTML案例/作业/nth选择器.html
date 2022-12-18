@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* section p:nth-child(3) {
+            background-color: pink;
+        } */
+        section p:nth-of-type(2) {
+            background-color: pink;
+        }
+        /* :nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。
+        n 可以是数字、关键词或公式。
+        注意：如果第 N 个子元素与选择的元素类型不同则样式无效！ */
+
+        /* :nth-of-type(n) 选择器匹配属于父元素的特定类型的第 N 个子元素的每个元素。
+        n 可以是数字、关键词或公式。 */
+
+        /* 简而言之就是child先把所有父亲的子元素排序，然后看指定的第几个它符合不,
+        type就是先找符合的类型，再把符合的这些按1,2,3...排起来 */
+
+    </style>
+</head>
+<body>
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <p>强哥</p>
+        <div>熊二</div>
+        <span>你好</span>
+        <span>哇</span>
+    </section>
+</body>
+</html>

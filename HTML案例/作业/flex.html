@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        .top-nav,
+        .bottom-nav {
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            /* background-color: pink; */
+        }
+        p {
+            flex: 1;
+            height: 100px;
+            background-color: skyblue;
+            margin: 1px 1px;
+        }
+        
+        .top-nav p:nth-child(2) {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="top-nav">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+        </div>
+        <div class="bottom-nav">
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+            <p>d</p>
+            <p>e</p>
+        </div>
+    </div>
+</body>
+</html>

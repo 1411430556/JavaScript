@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>删除节点</title>
+</head>
+<body>
+  <button>删除</button>
+  <ul>
+    <li>熊大</li>
+    <li>熊二</li>
+    <li>光头强</li>
+  </ul>
+  <script>
+    var btn = document.querySelector('button')
+    var ul = document.querySelector('ul')
+    btn.onclick = function () {
+        // 删除一个后，新的顶上来，索引就变成 0 了
+      if (ul.children.length === 0) {   //  !ul.children.length 也行
+        this.disabled = true
+      }else {
+        ul.removeChild(ul.children[0])
+      }
+      // if (ul.children.length > 0) {
+      //   ul.removeChild(ul.children[0])
+      // } else {
+      //   this.disabled = true
+      // }
+    }
+  </script>
+</body>
+</html>

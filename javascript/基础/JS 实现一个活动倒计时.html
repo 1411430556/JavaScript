@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 实现一个活动倒计时</title>
+</head>
+<body>
+<h1 id="activityText"></h1>
+<script>
+  countDown();
+  function countDown() {
+    function addZero(i) {
+      return i < 10 ? "0" + i : i;
+    }
+    let activityText = document.querySelector('#activityText');
+    let timer = null;
+    const startTime = new Date('2021-11-01 00:00:00');
+    const endTime = new Date('2022-11-19 23:59:59');
+    // 注：这里是直接使用用户本地系统时间做演示
+    const nowTime = new Date();
+    // 当前时间距离活动开始时间的差值
+    const beginDiff = parseInt((startTime.getTime() - nowTime.getTime()) / 1000);
+    //当前时间距离活动结束时间的差值
+    const endDiff = parseInt((endTime.getTime() - nowTime.getTime()) / 1000);
+    // 剩余时间
+    const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+    let day = parseInt(leftTime / (24 * 60 * 60))
+    let hour = parseInt(leftTime / (60 * 60) % 24);
+    let minute = parseInt(leftTime / 60 % 60);
+    let second = parseInt(leftTime % 60);
+    day = addZero(day);
+    hour = addZero(hour);
+    minute = addZero(minute);
+    second = addZero(second);
+
+    if (beginDiff > 0) {
+      activityText.innerText = `距活动开始 ${day}天 ${hour}时 ${minute}分 ${second}秒`;
+      timer = setTimeout(countDown, 1000);
+    } else if (leftTime <= 0) {
+      activityText.innerText = '活动已结束！更多优惠请在线咨询';
+      clearTimeout(timer);
+    } else {
+      activityText.innerText = `距活动结束 ${day}天 ${hour}时 ${minute}分 ${second}秒`;
+      timer = setTimeout(countDown, 1000);
+    }
+  }
+</script>
+</body>
+</html>

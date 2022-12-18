@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ES11 Promise.allSettled</title>
+</head>
+<body>
+  <script>
+    /**
+     * Promise.allSettled() 方法是 promise 并发性方法的其中之一。在你有多个不依赖于彼此成功完成的异步任务时，或者你总是想知道每个 promise 的结果时，
+     * 使用 Promise.allSettled() 。
+     * 相比之下，如果任务相互依赖，或者如果你想立即拒绝其中任何任务，Promise.all() 返回的 Promise 可能更合适。
+     * */
+      //声明两个promise对象
+    const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve('商品数据 - 1')
+        }, 1000)
+      })
+
+    const p2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // resolve('商品数据 - 2')
+        reject('出错啦!')
+      }, 1000)
+    })
+
+    // allSettled 方法，总的返回始终是一个成功的Promise，但是能得到里面每一个单个Promise的状态和结果
+    const result = Promise.allSettled([p1, p2])
+
+    // all，只有全部成功才会返回成功的Promise，有一个失败就返回失败的Promise
+    // const res = Promise.all([p1, p2])
+
+    console.log(result)
+  </script>
+</body>
+</html>

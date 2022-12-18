@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子阴影</title>
+    <style>
+        div {
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            /* 第一个数值是左右偏移，右为正
+            第二个数值是上下偏移，下为正         【前两个数值必须有】
+            第三个数值是阴影的模糊程度，越大越模糊
+            第四个数值是阴影的大小
+            第五个数值是阴影的颜色    半透明效果  rgba(0, 0, 0, .3)
+            第六个数值是设置阴影在内部还是外部，默认在外部，但是不能写出来，内部是inset
+            盒子阴影不占用空间，不会影响其它盒子排列。
+            box-shadow: 10px 10px 10px 10px skyblue ; */
+        }
+
+        div:hover {
+            /* 让鼠标放上去的时候有阴影效果 */
+            box-shadow: 10px 10px 10px 10px skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
