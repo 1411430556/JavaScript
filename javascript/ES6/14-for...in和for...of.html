@@ -11,12 +11,18 @@
   <script>
     //声明一个数组
     const xiyou = ['唐僧', '孙悟空', '猪八戒', '沙僧']
-    
-    // 使用 for...in 遍历对象
-    for (let k in xiyou) {      // for...in里 k 得到的是键名（序号）
-      console.log(k)   // 0 1 2 3
-      console.log(xiyou[k])   // 唐僧 孙悟空 猪八戒 沙僧
 
+    //声明一个对象
+    const person = {
+      name: '小明',
+      sex: '男',
+      age: 10,
+    }
+
+    // 使用 for...in 遍历对象
+    for (let k in person) {      // for...in里 k 得到的是键名
+      console.log(k)   // name sex age
+      console.log(person[k])   // 小明 男 10
     }
 
     // 使用 for...of 遍历数组
