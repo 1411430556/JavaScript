@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage存储</title>
+</head>
+<body>
+    <script>
+        let sto = {a: 'haha', b: 'hello'}
+        let zhuanhuan = JSON.stringify(sto)
+        window.localStorage.setItem('demo', zhuanhuan)
+    </script>
+</body>
+</html>
